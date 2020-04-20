@@ -328,7 +328,7 @@ SELECT
 FROM
     Empleado
     INNER JOIN Cubiculo
-        ON Empleado.id_cubiculo = Cubiculo.id
+        ON Empleado.id_cubiculo = Cubiculo.id_cubiculo
 WHERE
     Empleado.especialidad = 'Diseño';
 ```
