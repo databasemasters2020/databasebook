@@ -67,7 +67,7 @@ A continuación, diseccionaremos un ejemplo de cómo crear tablas en PostgreSQL:
 {% tab title="Alumno" %}
 ```sql
 CREATE TABLE Alumno (
-    rut INTEGER NOT NULL,
+    rut INTEGER,
     nombre VARCHAR(45),
     id_carrera INTEGER,
     PRIMARY KEY (rut),
@@ -79,8 +79,8 @@ CREATE TABLE Alumno (
 {% tab title="Carrera" %}
 ```sql
 CREATE TABLE Carrera (
-    id INTEGER NOT NULL PRIMARY KEY,
-    nombre_carrera VARCHAR(45)
+    id INTEGER PRIMARY KEY,
+    nombre_carrera VARCHAR(45) NOT NULL
 );
 ```
 {% endtab %}
@@ -93,8 +93,9 @@ Cosas que debemos notar:
 * Una tabla debe tener definida una clave primaria, y puede tener definidas tantas claves foráneas como sea necesario.
 * La clave primaria puede ser más de un campo, para lo cual se escriben en el paréntesis separados por comas.
   * Por ejemplo: `PRIMARY KEY (campo_1, campo_2, ...)`
-* En ambas tablas se explicita que la clave primaria no puede ser el valor nulo.
-  *  **Esto no implica que id\_carrera sea no nulo.**
+* En la tabla Carrera se explicita que el nombre de la carrera sea no nulo.
+* Que un campo sea una clave primaria implica que éste debe ser **único y no nulo.**
+  * **Esto no implica que la clave foránea id\_carrera deba ser no nula.**
 
 {% hint style="info" %}
 Por ejemplo, puedo insertar un alumno con nombre y rut \(sin id\_carrera\) y entrará en la tabla sin problemas, lo que se traduciría a un alumno sin carrera. Si queremos exigir que todos los alumnos tengan una carrera, debemos explicitar **NOT NULL** para el campo `id_carrera`.
@@ -102,7 +103,9 @@ Por ejemplo, puedo insertar un alumno con nombre y rut \(sin id\_carrera\) y ent
 
 ### Una Nota sobre CONSTRAINS
 
-Las palabras reservadas que se utilizan para especificar detalles sobre la columna se denominan **restricciones \(constrains\).** Se utilizan para dar algunas condiciones especiales a ciertas columnas. Las más comunes son:
+Las palabras reservadas que se utilizan para especificar detalles sobre la columna se denominan **restricciones \(constrains\).** Se utilizan para dar algunas condiciones especiales a ciertas columnas. Como se ve en el ejemplo anterior, las restricciones pueden definirse para la tabla \(como en la tabla Alumno\) o para la columna \(como en la tabla Carrera\).
+
+Las más comunes son:
 
 * **NOT NULL:** La columna no puede tener valores nulos.
 * **UNIQUE:** Todos los valores en la columna deben ser distintos.
@@ -123,10 +126,6 @@ CREATE TABLE Alumno(
     tipo_alumno VARCHAR(45) CHECK (tipo_alumno IN ('Regular','Parcial','Eliminado'))
 );
 ```
-
-{% hint style="info" %}
-Como la restricción PRIMARY KEY considera que `rut` debe ser NOT NULL, no es necesario especificar ambas restricciones.
-{% endhint %}
 
 ### Tipos de Datos Comunes
 
