@@ -54,7 +54,7 @@ Las operaciones de Definición de Datos indican la lógica de cómo serán almac
 Las 3 operaciones básicas son **CREATE, ALTER y DROP.** 
 
 * La operación **CREATE** permite definir una tabla y sus atributos \(columnas\).
-* La operación **ALTER** permite modificar las características de una tabla ya creada. Permite agregar, eliminar o modificar columnas, entre otras cosas.
+* La operación **ALTER** permite modificar las características de una tabla ya creada. Permite agregar, eliminar o modificar columnas y restricciones, entre otras cosas.
 * La operación **DROP** elimina la tabla, **junto con toda la información que contiene.** 
 
 En este apunte, nos enfocaremos en la **Creación de Tablas.**
