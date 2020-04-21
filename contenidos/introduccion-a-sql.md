@@ -80,7 +80,7 @@ CREATE TABLE Alumno (
 ```sql
 CREATE TABLE Carrera (
     id INTEGER NOT NULL PRIMARY KEY,
-    nombre_carrera VARCHAR(45),
+    nombre_carrera VARCHAR(45)
 );
 ```
 {% endtab %}
@@ -88,7 +88,7 @@ CREATE TABLE Carrera (
 
 Cosas que debemos notar:
 
-* La tabla **Alumno** tiene de clave primaria `rut`, mientras que la la tabla **Carrera** tiene de clave primaria `id`
+* La tabla **Alumno** tiene de clave primaria `rut`, mientras que la la tabla **Carrera** tiene de clave primaria `id`.
 * La tabla **Alumno** tiene una clave foránea, `id_carrera`, que apunta a la clave primaria de **Carrera**.
 * Una tabla debe tener definida una clave primaria, y puede tener definidas tantas claves foráneas como sea necesario.
 * La clave primaria puede ser más de un campo, para lo cual se escriben en el paréntesis separados por comas.
@@ -98,6 +98,34 @@ Cosas que debemos notar:
 
 {% hint style="info" %}
 Por ejemplo, puedo insertar un alumno con nombre y rut \(sin id\_carrera\) y entrará en la tabla sin problemas, lo que se traduciría a un alumno sin carrera. Si queremos exigir que todos los alumnos tengan una carrera, debemos explicitar **NOT NULL** para el campo `id_carrera`.
+{% endhint %}
+
+### Una Nota sobre CONSTRAINS
+
+Las palabras reservadas que se utilizan para especificar detalles sobre la columna se denominan **restricciones \(constrains\).** Se utilizan para dar algunas condiciones especiales a ciertas columnas. Las más comunes son:
+
+* **NOT NULL:** La columna no puede tener valores nulos.
+* **UNIQUE:** Todos los valores en la columna deben ser distintos.
+* **PRIMARY KEY:** NOT NULL + UNIQUE. Especifica **claves primarias.**
+* **REFERENCES &lt;Tabla&gt;\(&lt;columna&gt;\):** El valor de la columna debe existir en `<columna>`. Es decir, especifica **claves foráneas.**
+* **CHECK &lt;condicion&gt;:** La columna solo admite valores que cumplan con la condición.
+
+Por ejemplo, si extendemos la tabla Alumno del ejemplo anterior y utilizamos restricciones, tenemos:
+
+```sql
+CREATE TABLE Alumno(
+    rut INTEGER PRIMARY KEY,
+    rol_usm INTEGER UNIQUE,
+    nombre VARCHAR(45) NOT NULL,
+    apellido VARCHAR(45) NOT NULL,
+    id_carrera INTEGER REFERENCES Carrera (id),
+    semestres_cursados INTEGER CHECK (semestres_cursados > 0),
+    tipo_alumno VARCHAR(45) CHECK (tipo_alumno IN ('Regular','Parcial','Eliminado'))
+);
+```
+
+{% hint style="info" %}
+Como la restricción PRIMARY KEY considera que `rut` debe ser NOT NULL, no es necesario especificar ambas restricciones.
 {% endhint %}
 
 ### Tipos de Datos Comunes
