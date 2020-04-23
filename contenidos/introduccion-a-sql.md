@@ -382,6 +382,8 @@ Existen 4 tipos de JOIN estándar, todos originados de la teoría de conjuntos. 
 
 ![JOINS visualizados como diagramas de Venn](../.gitbook/assets/all-joins.png)
 
+![Ejemplo de los cuatro tipos de JOINS con dos tablas, &quot;Alumno&quot; y &quot;Cubiculo&quot;](../.gitbook/assets/joins.PNG)
+
 ## Operaciones de Control de Datos
 
 Las operaciones de control de datos se utilizan para definir niveles de acceso a los datos contenidos en la Base de Datos. Su uso va más allá del ámbito de este curso.
