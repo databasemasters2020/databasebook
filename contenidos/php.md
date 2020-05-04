@@ -84,7 +84,7 @@ Ambas formas de escribir código son válidas, pero se debe conservar el orden d
 
 #### Formularios
 
-El manejo de formularios en el desarrollo web es una herramienta obligatoria, permitiran a los usuarios ingresar datos y que estos queden guardados en la base de datos con ayuda de nuestro lenguaje de backend, PHP. A continuación implementamos un formulario que enviará los datos a una página PHP que configuraremos para guardar los datos en la Base de Datos:
+El manejo de formularios en el desarrollo web es una herramienta obligatoria, permitirán a los usuarios ingresar datos y que estos queden guardados en la base de datos con ayuda de nuestro lenguaje de back-end, PHP. A continuación implementamos un formulario que enviará los datos a una página PHP que configuraremos para guardar los datos en la Base de Datos:
 
 {% tabs %}
 {% tab title="index.php" %}
