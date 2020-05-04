@@ -156,8 +156,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 <?php
-$pais = $_POST["pais"];
-$nro_cont = $_POST["nro_cont"];
 $sql = "SELECT * FROM Informe";
 $result = pg_query_params($dbconn, $sql, array());
 if( pg_num_rows($result) > 0 ) {
