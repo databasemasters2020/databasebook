@@ -147,6 +147,22 @@ LoadModule php7_module "c:/php/php7apache2_4.dll"
 PHPIniDir "c:/php"
 ```
 
+* [ ] Además, modifique la línea 285 para aceptar archivos índice en php:
+
+```php
+Encuentre las líneas
+
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+y cambiela por:
+
+<IfModule dir_module>
+    DirectoryIndex index.html index.php
+</IfModule>
+```
+
 * [ ] Busque en el archivo **php.ini** las siguientes lineas a modificar:
 
 ```text
