@@ -11,4 +11,5 @@
 * [Instalación de Git](adicionales/git.md)
 * [Uso de Git](adicionales/git-1.md)
 * [Resumen Comandos Git](adicionales/comandos-git.md)
+* [Instalación de PostgreSQL, PHP y Apache](adicionales/instalacion-de-postgresql-y-php.md)
 
