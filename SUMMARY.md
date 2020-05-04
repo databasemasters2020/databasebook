@@ -6,6 +6,7 @@
 
 * [Introducción a SQL](contenidos/introduccion-a-sql.md)
 * [HTML, CSS y Bootstrap](contenidos/html-css-bootstrap.md)
+* [PHP](contenidos/php.md)
 
 ## Adicionales
 

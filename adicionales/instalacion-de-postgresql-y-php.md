@@ -64,7 +64,7 @@ Por favor verificar que se están instalando las últimas versiones de las tecno
 
 Si ingresan a PostgreSQL desde la consola \(a través del comando de la sección anterior\) es posible que les aparezca una advertencia como la siguiente:
 
-![El c&#xF3;digo de p&#xE1;gina difiere del c&#xF3;digo de p&#xE1;gina de Windows \(1252\).](../.gitbook/assets/image%20%283%29.png)
+![El c&#xF3;digo de p&#xE1;gina difiere del c&#xF3;digo de p&#xE1;gina de Windows \(1252\).](../.gitbook/assets/image%20%287%29.png)
 
 Si eso ocurre, es posible que algunos caracteres especiales se visualicen incorrectamente. Si desea que no sea así, siga los siguientes pasos:
 
@@ -84,7 +84,7 @@ Si prefiere, puede utilizar la interfaz de pgAdmin por sobre la consola para man
 * [ ] En la pestaña de la izquierda abra Servers -&gt; PostgreSQL 12 -&gt; postgres \(base de datos por defecto que crea Postgres; en otra sección se verá cómo crear otras bases de datos\). pgAdmin pedirá la contraseña para el super usuario y da la opción de recordarla.
 * [ ] Teniendo postgres \(u otra base de datos\) **seleccionada,** presione el botón **Query Tool** \(o vaya a Tools -&gt; Query Tool\). Esto abrirá una hoja para hacer consultas en SQL. Compruebe que la abrió en la base de datos apropiada.
 
-![En \(1\), bot&#xF3;n Query Tool. En \(2\), indicador de que se abri&#xF3; en la BD postgres.](../.gitbook/assets/image%20%286%29.png)
+![En \(1\), bot&#xF3;n Query Tool. En \(2\), indicador de que se abri&#xF3; en la BD postgres.](../.gitbook/assets/image%20%2812%29.png)
 
 Si logró hacer correctamente todos los pasos anteriores, entonces podrá utilizar PostgreSQL sin mayores problemas.
 
@@ -103,7 +103,7 @@ Si no va a trabajar más en pgAdmin, además de cerrar la pestaña del navegador
   * [ ] Modificar `AllowOverride none` por `AllowOverride All` \(línea 235\).
   * [ ] Modificar `DocumentRoot "${SRVROOT}/htdocs"` y `<Directory "${SRVROOT}/htdocs">` a su dirección de tareas `"S{TAREAS}"` \(líneas 251 y 252\).
 
-![Recuerde definir la direcci&#xF3;n donde guardar&#xE1; sus tareas.](../.gitbook/assets/image%20%282%29.png)
+![Recuerde definir la direcci&#xF3;n donde guardar&#xE1; sus tareas.](../.gitbook/assets/image%20%283%29.png)
 
 ![](../.gitbook/assets/image.png)
 
@@ -188,5 +188,5 @@ pg_close($dbconn);
 
 Pruebe ahora a ejecutar el servidor de Apache y abra localhost/index.html. Debería verse algo como lo siguiente:
 
-![Conexi&#xF3;n exitosa!](../.gitbook/assets/image%20%281%29.png)
+![Conexi&#xF3;n exitosa!](../.gitbook/assets/image%20%282%29.png)
 
