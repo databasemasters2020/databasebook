@@ -19,6 +19,7 @@ Básicamente, necesitamos tres componentes para poder montar una página web:
 Esta guía de instalación está enfocada principalmente para usuarios en Windows. Si necesita instalar estos recursos en alguna distribución de linux, presentamos algunos links que pueden ser útiles a continuación:
 
 * [https://computingforgeeks.com/install-postgresql-12-on-ubuntu/](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
+* [https://computingforgeeks.com/how-to-install-postgresql-12-on-fedora/](https://computingforgeeks.com/how-to-install-postgresql-12-on-fedora/)
 * [https://medium.com/@Riverside/how-to-install-apache-php-postgresql-lapp-on-ubuntu-16-04-adb00042c45d](https://medium.com/@Riverside/how-to-install-apache-php-postgresql-lapp-on-ubuntu-16-04-adb00042c45d)
 * [https://www.linux-party.com/92-php/7910-instalar-un-servidor-lapp-linux--apache-postgresql-php](https://www.linux-party.com/92-php/7910-instalar-un-servidor-lapp-linux--apache-postgresql-php)
 
