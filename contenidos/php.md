@@ -4,7 +4,7 @@ description: Guía rápida de iniciación en PHP
 
 # PHP
 
-Hypertext preprocessor es un lenguaje de scripting de propósito general.
+**PHP** \(Sigla recursiva para PHP Hypertext preprocessor\) es un lenguaje de scripting de propósito general.
 
 ### Frontend
 
