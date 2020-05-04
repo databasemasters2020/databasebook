@@ -11,6 +11,7 @@ El objetivo de este apunte es tener en un solo lugar toda la materia vista en ay
 ### Contenidos
 
 * Introducción a SQL
+* HTML, CSS y Bootstrap
 
 ### Material Adicional
 
