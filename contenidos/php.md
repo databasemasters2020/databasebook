@@ -6,13 +6,13 @@ description: Guía rápida de iniciación en PHP
 
 **PHP** \(Sigla recursiva para PHP Hypertext preprocessor\) es un lenguaje de scripting de propósito general.
 
-### Frontend
+### Front-end
 
 Hasta ahora hemos visto HTML, CSS y bootstrap mostrando un contenido estático y no persistente, el cual no guarda datos ingresados por el usuario en el tiempo. A toda la parte del desarrollo web con la cual interactúa y ve el usuario se le llama Front-end.
 
-### Backend
+### Back-end
 
-En la actualidad requerimos más que solo Front-end, las páginas web son cada vez más complejas, requerimos almacenar información en el tiempo, creación de usuarios, páginas privilegiadas\(registro obligatorio o suscripción mensual\), seguridad y lo que nos concierne, uso de **Bases de Datos.** Para esto, requerimos de un servidor que tenga disponible continuamente cada uno de los recursos necesarios para que nuestra página web funcione íntegramente. Existen múltiples lenguajes de programación aptos para ser usados en el lado del servidor de una página web, los más comunes son: PHP, JavaScript, Java, .NET y Python. Además, múltiples Bases de Datos a utilizar, por ejemplo: PostgreSQL, MySQL, MongoDB, Oracle, MS SQL Server, etc. Toda estas herramientas componen lo que hoy llamamos el **Backend**.
+En la actualidad requerimos más que solo Front-end. Las páginas web son cada vez más complejas, requerimos almacenar información en el tiempo, creación de usuarios, páginas privilegiadas \(registro obligatorio o suscripción mensual\), seguridad y, lo que nos concierne, uso de **Bases de Datos.** Para esto, requerimos de un servidor que tenga disponible continuamente cada uno de los recursos necesarios para que nuestra página web funcione íntegramente. Existen múltiples lenguajes de programación aptos para ser usados en el lado del servidor de una página web, los más comunes son: PHP, JavaScript, Java, .NET y Python. Además, existen múltiples Bases de Datos a utilizar, por ejemplo: PostgreSQL, MySQL, MongoDB, Oracle, MS SQL Server, etc. Toda estas herramientas componen lo que hoy llamamos el **Back-end**.
 
 ### PHP - PostgreSQL
 
