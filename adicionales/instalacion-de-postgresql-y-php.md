@@ -129,7 +129,7 @@ Si no va a trabajar más en pgAdmin, además de cerrar la pestaña del navegador
 
 * [ ] Ejecute un Símbolo del Sistema **como Administrador** en **C:\Apache24\bin.** Para eso utilice el comando `cd C:\Apache24\bin`.
 * [ ] Ejecute el comando `httpd -k install`.
-* [ ] Para comprobar la instalación, copie el archivo de ejemplo que está en **C:\Apache24\htdocs\index.html** en el directorio que definió para su tarea. Luego, ejecute `hpptd -k start` y abra una pestaña de navegador a [http://localhost/index.html](http://localhost/index.html).
+* [ ] Para comprobar la instalación, copie el archivo de ejemplo que está en **C:\Apache24\htdocs\index.html** en el directorio que definió para su tarea. Luego, ejecute `httpd -k start` y abra una pestaña de navegador a [http://localhost/index.html](http://localhost/index.html).
 
 {% hint style="success" %}
 Para iniciar y apagar el servidor de Apache se utilizan los comandos **httpd -k start** y **httpd -k stop.**
