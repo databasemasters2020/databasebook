@@ -11,17 +11,30 @@ description: >-
 Básicamente, necesitamos tres componentes para poder montar una página web:
 
 * **La base de datos:** En este caso, utilizaremos **PostgreSQL 12.**
-* **El lenguaje de código de servidor:** Para poder comunicar el web server con la base de datos. En este caso, utilizaremos **PHP.**
-* **El web server:** Para poder montar los recursos y visualizarlos de forma local. En este caso, utilizaremos **Apache.**
+* **El lenguaje de código de servidor:** Para poder comunicar el web server con la base de datos. En este caso, utilizaremos **PHP 7.3+.**
+* **El web server:** Para poder montar los recursos y visualizarlos de forma local. En este caso, utilizaremos **Apache 2.4.**
 
 ## Nota para usuarios en Linux
 
 Esta guía de instalación está enfocada principalmente para usuarios en Windows. Si necesita instalar estos recursos en alguna distribución de linux, presentamos algunos links que pueden ser útiles a continuación:
 
+Links Oficiales:
+
+* PostgreSQL: [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
+* Apache 2.4: [https://httpd.apache.org/docs/current/install.html](https://httpd.apache.org/docs/current/install.html)
+* PHP: [https://www.php.net/manual/en/install.unix.apache2.php](https://www.php.net/manual/en/install.unix.apache2.php)
+
+Algunos links útiles si trabajará en **Fedora:**
+
+* [https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-apache-http-server/](https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-apache-http-server/)
+* [https://kifarunix.com/install-apache-on-fedora-30/](https://kifarunix.com/install-apache-on-fedora-30/)
+
+Otras guías no oficiales. **Manejar con cuidado:**
+
 * [https://computingforgeeks.com/install-postgresql-12-on-ubuntu/](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
 * [https://computingforgeeks.com/how-to-install-postgresql-12-on-fedora/](https://computingforgeeks.com/how-to-install-postgresql-12-on-fedora/)
 * [https://medium.com/@Riverside/how-to-install-apache-php-postgresql-lapp-on-ubuntu-16-04-adb00042c45d](https://medium.com/@Riverside/how-to-install-apache-php-postgresql-lapp-on-ubuntu-16-04-adb00042c45d)
-* [https://www.linux-party.com/92-php/7910-instalar-un-servidor-lapp-linux--apache-postgresql-php](https://www.linux-party.com/92-php/7910-instalar-un-servidor-lapp-linux--apache-postgresql-php)
+* [https://www.linux-party.com/92-php/7910-instalar-un-servidor-lapp-linux--apache-postgresql-php](https://www.linux-party.com/92-php/7910-instalar-un-servidor-lapp-linux--apache-postgresql-php) \(CUIDADO: las versiones están desactualizadas. Intenten con los otros links primero\)
 
 {% hint style="info" %}
 Recomendamos verificar la instalación de las tecnologías a la brevedad, para poder solucionar problemas lo más pronto posible.
