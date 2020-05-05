@@ -48,7 +48,7 @@ Por favor verificar que se están instalando las últimas versiones de las tecno
 
 * Es recomendable siempre instalar programas y paquetes utilizando el gestor de paquetes correspondiente a la distribución \(apt en Ubuntu, dnf en Fedora, etc\).
 *  Puede ser útil usar **uname -a** si se está en linux para conocer más detalles de la versión del sistema operativo.
-* Para ver si está disponible algún paquete de manera oficial en Ubuntu/Fedora, pueden utilizar el comando **sudo apt-file search &lt;paquete&gt;** en Ubuntu y **sudo dnf provides &lt;paquete&gt;** en Fedora.
+* Para ver si está disponible algún paquete de manera oficial en Ubuntu/Fedora, pueden utilizar el comando **sudo apt search &lt;paquete&gt;** en Ubuntu y **sudo dnf provides &lt;paquete&gt;** en Fedora.
 
 ## Instalación de PostgreSQL
 
