@@ -121,7 +121,7 @@ Si no va a trabajar más en pgAdmin, además de cerrar la pestaña del navegador
   * [ ] Agregue una línea que defina dónde estará su directorio de trabajo, de la forma `Define TAREAS "c:/donde/guarde/sus/tareas"`. Guíese por la imagen abajo \(línea 38\). **Debe utilizar forward-slash, no backslash y no debe terminar con un slash.** De esta forma, podrá modificar la configuración fácilmente para cambiar de tarea.
   * [ ] Modificar `#ServerName www.example.com:80` por `ServerName localhost:80` \(línea 227\). **Recuerde eliminar el \#.**
   * [ ] Modificar `AllowOverride none` por `AllowOverride All` \(línea 235\).
-  * [ ] Modificar `DocumentRoot "${SRVROOT}/htdocs"` y `<Directory "${SRVROOT}/htdocs">` a su dirección de tareas `"S{TAREAS}"` \(líneas 251 y 252\).
+  * [ ] Modificar `DocumentRoot "${SRVROOT}/htdocs"` y `<Directory "${SRVROOT}/htdocs">` a su dirección de tareas `"${TAREAS}"` \(líneas 251 y 252\).
 
 ![Recuerde definir la direcci&#xF3;n donde guardar&#xE1; sus tareas.](../.gitbook/assets/image%20%283%29.png)
 
