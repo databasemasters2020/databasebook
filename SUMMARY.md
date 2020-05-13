@@ -6,7 +6,9 @@
 
 * [Introducción a SQL](contenidos/introduccion-a-sql.md)
 * [HTML, CSS y Bootstrap](contenidos/html-css-bootstrap.md)
-* [PHP](contenidos/php.md)
+* [PHP](contenidos/php/README.md)
+  * [Anexo: Cómo hacer un dump](contenidos/php/anexo-como-hacer-un-dump.md)
+* [PHP: Un ejemplo](contenidos/php-un-ejemplo.md)
 
 ## Adicionales
 
