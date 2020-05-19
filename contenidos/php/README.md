@@ -29,6 +29,7 @@ Una de las tareas recurrentes al momento de desarrollar una página web con PHP,
 <?php
 // detalles de la conexion
 $conn_string = "host=localhost port=5432 dbname=postgres user=postgres password=<contraseña>";
+// se reemplaza "<contraseña>" por su contraseña, no se incluyen los "<>"
 // establecemos una conexion con el servidor postgresSQL
 $dbconn = pg_connect($conn_string);
 // Revisamos el estado de la conexion en caso de errores.
