@@ -68,7 +68,7 @@ $x = \(condición\)? resultado si condición es verdadera : resultado si condici
 5. Registramos los datos del usuario en la base de datos con la instrucción INSERT INTO, se envía la contraseña encriptada.
 
 {% hint style="warning" %}
-Nunca se guarda una contraseña en la base de datos sin antes encriptarla.
+Nunca se guarda una contraseña en la base de datos sin antes encriptarla. En el mundo real, uno [nunca debería guardar contraseñas](https://www.youtube.com/watch?v=8ZtInClXe1Q) si es que tiene los medios para no hacerlo.
 {% endhint %}
 
 ### Login
