@@ -9,6 +9,7 @@
 * [PHP](contenidos/php/README.md)
   * [Anexo: Cómo hacer un dump](contenidos/php/anexo-como-hacer-un-dump.md)
 * [PHP: Un ejemplo](contenidos/php-un-ejemplo.md)
+* [Sesiones en PHP](contenidos/sesiones-en-php.md)
 
 ## Adicionales
 
