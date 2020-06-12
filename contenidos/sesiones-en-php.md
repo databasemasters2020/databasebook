@@ -46,7 +46,7 @@ Todos estamos familiarizados con el concepto de sesiones, estas están presentes
 La idea es simple, necesitamos mantener un registro de los usuarios de nuestro sistema que persista en el tiempo, que esté lejos del alcance de los malignos de internet y que podamos acceder en forma continua y eficiente. Cada vez que alguien quiera acceder al sistema ingresara sus datos y nosotros debemos corroborar si los datos son congruentes con alguno de nuestros registros.   
 ¿Alguna idea de que podríamos utilizar...? Claro..., estamos en la asignatura de Bases de Datos, por lo que, tendremos una tabla llamada usuario, la cual contendrá los atributos que lo caracterizan. 
 
-Pero, ¿como hacemos para que solamente los usuarios puedan acceder a páginas exclusivas?, somos programadores, cada vez que un usuario quiera acceder a una página exclusiva, podríamos corroborar con el típico if si es que el solicitante tiene una sesión activa, PHP nos entrega herramientas para realizar estas tareas. 
+Pero, ¿Cómo hacemos para que solamente los usuarios puedan acceder a páginas exclusivas?, somos programadores, cada vez que un usuario quiera acceder a una página exclusiva, podríamos corroborar con el típico if si es que el solicitante tiene una sesión activa, PHP nos entrega herramientas para realizar estas tareas. 
 
 1. El usuario solicita ingresar a determinada página.
 2. \(usuario es registrado\)? permitir ingreso : no permitir, redireccionar al login;
