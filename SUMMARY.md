@@ -10,6 +10,11 @@
   * [Anexo: Cómo hacer un dump](contenidos/php/anexo-como-hacer-un-dump.md)
 * [PHP: Un ejemplo](contenidos/php-un-ejemplo.md)
 * [Sesiones en PHP](contenidos/sesiones-en-php.md)
+* [Ruby](contenidos/ruby.md)
+* [Patrón Modelo-Vista-Controlador](contenidos/patron-modelo-vista-controlador.md)
+* [Ruby On Rails](contenidos/ruby-on-rails.md)
+* [RoR Devise](contenidos/ror-devise.md)
+* [RoR CRUD](contenidos/ror-crud.md)
 
 ## Adicionales
 
