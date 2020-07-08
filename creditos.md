@@ -7,7 +7,7 @@ description: >-
 
 # Créditos
 
-El presente material ha sido desarrollado con esfuerzo y profesionalismo para proveer apoyo en el aprendizaje de los alumnos de la asignatura de Bases de Datos en sus primeros acercamientos a las aplicaciones web. Se agradece a cada uno de los redactores.
+El presente material ha sido desarrollado con esfuerzo y profesionalismo para proveer apoyo en el aprendizaje de los alumnos de la asignatura de Bases de Datos en sus primeros acercamientos a las aplicaciones web. Se agradece a cada uno de los redactores:
 
 * Javier Mendoza
 * Kevin Reyes
