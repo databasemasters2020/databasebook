@@ -22,7 +22,7 @@ Luego de instalar y configurar la gema se pueden crear modelos de Devise, que vi
 
 Los pasos para configurar [Devise](https://github.com/plataformatec/devise) son los siguientes:
 
-* Agregar la gema al `Gemfile` \(dentro de su directorio de proyecto\)
+* Agregar la gema al `Gemfile`\(dentro de su directorio de proyecto\)
 
 ```text
 gem 'devise'

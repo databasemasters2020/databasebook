@@ -271,7 +271,7 @@ Si refrescas la página deberías ver la frase "Hola Mundo" tres veces.
 Una forma de saltar todo el proceso de vincular una vista y un controlador es crearlas al mismo tiempo con:
 
 ```text
-rails g controller NombreControlador nombrevista1 nombre vista2 ...
+rails g controller NombreControlador nombrevista1 nombrevista2 ...
 ```
 
 ### Definiendo la página de inicio <a id="definiendo-la-pagina-de-inicio"></a>
