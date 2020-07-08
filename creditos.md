@@ -15,6 +15,10 @@ El presente material ha sido desarrollado con esfuerzo y profesionalismo para pr
 * Felipe Quintanilla
 * Diego Altamirano
 
+Revisión:
+
+* Profesora Cecilia Reyes Covarrubias
+
 {% hint style="warning" %}
 El material se encuentra en mejora continua, por lo que, se agradece el reporte de errores, ideas mal explicadas, errores de concepto o falta de contenidos relevantes.
 {% endhint %}
