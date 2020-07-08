@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Base de Datos 2020-1](README.md)
+* [Bases de Datos INF-UTFSM](README.md)
 
 ## Contenidos
 
