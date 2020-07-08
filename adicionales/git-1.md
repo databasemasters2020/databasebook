@@ -9,7 +9,9 @@ description: Guía de Inicio Rápido
 Es un sistema de control de versiones distribuido.  Se conoce como versión a un estado específico de un programa.   
 Probablemente has trabajado con un sistema de control de versiones sin darte cuenta:
 
-![Sistema de control de versiones ancestral](../.gitbook/assets/anotacion-2020-04-17-154615.jpg)
+![Sistema de control de versiones ancestral.](../.gitbook/assets/anotacion-2020-04-17-154615.jpg)
+
+En la imagen anterior se muestra un directorio lleno de carpetas con nombres del tipo: versión1, versión2, versiónfinal, versiónFinalFinal, etcétera.
 
 Se le llama S.C.V distribuido, ya que permite trabajar colaborativamente en un proyecto, ya sea, en una misma oficina o a distancia. Esto último nos será de gran utilidad en el desarrollo del semestre online, ya que Git nos entrega poderosas herramientas para trabajar en equipo, recuperar trabajo perdido, hacer Ctrl+Z nivel profesional y unificar trabajo de muchos desarrolladores de forma automática.  
 El uso de git durante el semestre será opcional **\(a no ser que se indique lo contrario\)**, pero totalmente recomendable, ya que será una herramienta que utilizarán en su vida **profesional**.
@@ -19,7 +21,7 @@ El uso de git durante el semestre será opcional **\(a no ser que se indique lo 
 La plataforma Aula ha colapsado por el acceso masivo debido a las clases online, por lo que, dado que la plataforma maneja tanta información, requiere a unos expertos en Bases de Datos, se ha solicitado a los alumnos de Bases de Datos 2020-1 que puedan crear una nueva plataforma.  
 Durante el desarrollo del tutorial trabajaremos con una carpeta llamada **aula** con los siguientes archivos \(los cuales son una simplificación del código real\):
 
-![](../.gitbook/assets/archivosiniciales2.jpg)
+![Directorio con documentos de texto para cada ramo](../.gitbook/assets/archivosiniciales2.jpg)
 
 A continuación el detalle de lo que contiene cada archivo:
 
@@ -130,7 +132,7 @@ A continuación, ejecutamos el comando:
 git status
 ```
 
-![](../.gitbook/assets/status.jpg)
+![Output de comando git status mostrando el estado de los archivos del directorio en relaci&#xF3;n a git.](../.gitbook/assets/status.jpg)
 
 El color rojo en los archivos nos indica que estos aún no han sido añadidos al Stage.  
 
@@ -153,7 +155,7 @@ git add .
 git s       // Recordar que creamos un alias para git status
 ```
 
-![](../.gitbook/assets/add.jpg)
+![Output de git s con los archivos a&#xF1;adidos de ramos a&#xF1;adidos al Stage](../.gitbook/assets/add.jpg)
 
 {% hint style="success" %}
 El punto en `git add .` significa "añade al Stage todos los archivos".
@@ -169,7 +171,7 @@ Para guardar la versión actual de nuestra aplicación utilizaremos el comando *
 git commit -m "Proyecto inicializado en git"
 ```
 
-![](../.gitbook/assets/commit.jpg)
+![Output de git al ejecutar un commit. Se muestran los nuevos registros de estado de archivos.](../.gitbook/assets/commit.jpg)
 
 Si realizas git status, podrás ver que ya no hay ningún archivo, esto es porque te encuentras en la última versión que guardaste de tu aplicación y no hay ningún cambio que pudiéramos añadir al Stage que cambie tu versión.
 
@@ -193,7 +195,7 @@ git lg  // Versión corta, con información concisa.
 
 Si utilizas la versión corta del **log** obtendrás un output como el siguiente:
 
-![](../.gitbook/assets/log.jpg)
+![Output: 164d8b1 \(HEAD -&amp;gt; master\) Proyecto inicializado en git.](../.gitbook/assets/log.jpg)
 
 El código _**164d8b1**_ representa el identificador único del commit.
 
@@ -230,7 +232,7 @@ Imagina que alguien ha eliminado miles de líneas de código y archivos informat
 
 Si ejecutas el comando **git s,** verás algo como lo siguiente:
 
-![](../.gitbook/assets/borron.jpg)
+![git s indica con M los archivos que han sido modificados](../.gitbook/assets/borron.jpg)
 
 La letra **M** \(de Modified, o modificado\) ****en rojo simboliza que se han quitado lineas de código desde la última versión guardada. Por lo que, si añadiéramos estos archivos al **Stage** \(escenario\) ****e hiciéramos un commit \(fotografía\), guardaríamos una versión de nuestra aplicación con las miles de lineas de código y archivos informativos eliminados... y sin el laboratorio. Como no es lo que queremos, **¡utilizaremos el poder de git en nuestro proyecto!**  
 Para recuperar nuestros archivos en su forma original, utilizaremos el siguiente comando:
@@ -254,7 +256,7 @@ Gitlab es un servicio en la nube para almacenar y administrar versiones de aplic
 Link de acceso: [https://gitlab.labcomp.cl/](https://gitlab.labcomp.cl/).  
 Al iniciar sesión, verás una pantalla como la siguiente.
 
-![](../.gitbook/assets/gitlab.jpg)
+![Interfaz de GitLab con bot&#xF3;n para crear nuevo proyecto a la derecha](../.gitbook/assets/gitlab.jpg)
 
 Para crear un proyecto, presiona **New project** pon un nombre acorde al formato solicitado en las tareas, marca la opción **Initialize repository with a README** y presiona en **Create project.** En nuestro caso lo nombraremos **aula.**
 
@@ -276,7 +278,7 @@ git push -u origin master
 
 Se te pedirá ingresar tu nombre de usuario y contraseña de Gitlab.
 
-![](../.gitbook/assets/gitlabygit.jpg)
+![Output de git al realizar push: se muestra detalle de la cantidad de objetos actualizados y upload.](../.gitbook/assets/gitlabygit.jpg)
 
 Con esto nuestro proyecto ya está en Gitlab.
 
@@ -288,7 +290,7 @@ Considere el siguiente escenario: El profesor ha eliminado por error el curso de
 
 Para continuar, desde Gitlab eliminaremos el archivo **Infosoc.txt** \(simulando ser el profesor\). ****Desde la página del repositorio hacemos click en el archivo y al abrirlo seleccionamos en **delete.**
 
-![Esto podr&#xED;a pasar en un ambiente de trabajo.](../.gitbook/assets/infosoc.jpg)
+![Esto podr&#xED;a pasar en un ambiente de trabajo. Se muestra detalle de un archivo en gitlab](../.gitbook/assets/infosoc.jpg)
 
 Volvamos a la consola. Si revisamos nuestros archivos, notarás que **Infosoc.txt** sigue estando ahí. Por lo que, si hacemos un **git push** este, en teoría, volverá a estar en la página. 
 
@@ -296,7 +298,7 @@ Volvamos a la consola. Si revisamos nuestros archivos, notarás que **Infosoc.tx
 git push
 ```
 
-![Error](../.gitbook/assets/gitpush.jpg)
+![Git muestra error al realizar un push sin antes haber bajado los cambios desde gitlab.](../.gitbook/assets/gitpush.jpg)
 
 Para nuestra sorpresa, Gitlab nos impide realizar un push, ya que han habido cambios que no estamos considerando y, si hacemos push, podríamos borrar cambios de otros compañeros de equipo, o en este caso, el cambio que realizó el profesor.
 
@@ -336,7 +338,7 @@ En mi caso **e0a8d2e** es el id de mi primer commit, para revisar el suyo deben 
 
  Con esto verás nuevamente tu archivo, pero, en git hay varias cosas que arreglar para seguir trabajando, la solución planteada aquí no es la mejor, pero es la más simple al momento de comenzar en git.
 
-![](../.gitbook/assets/force.jpg)
+![Ventana de configuraciones en gitlab para eliminar la protecci&#xF3;n de ramas.](../.gitbook/assets/force.jpg)
 
 Nos vamos a las configuraciones de repositorio, en **protected branch** eliminamos la protección, seleccionando Unprotect.
 
