@@ -23,3 +23,7 @@
 * [Resumen Comandos Git](adicionales/comandos-git.md)
 * [Instalación de PostgreSQL, PHP y Apache](adicionales/instalacion-de-postgresql-y-php.md)
 
+---
+
+* [Créditos](creditos.md)
+
