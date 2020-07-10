@@ -94,7 +94,7 @@ _Rails automáticamente creará una tabla relacionada con nombre en minúscula y
 
 Varias cosas que debes tener en cuenta:
 
-* Puedes escribir `generate` ó, más corto, `g`.
+* Puedes escribir `generate` ,o más corto, `g`.
 * Los campos se separan por **espacio**.
 * Puedes definir el tipo del campo utilizando `:` seguido del tipo de datos \(sin espacios!\).
 * Los tipos más comunes son: `string`, `text`, `integer`, `decimal`, `date`, `time`, `datetime`, `boolean` y `references`.
