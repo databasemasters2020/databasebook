@@ -13,6 +13,7 @@ El objetivo de este apunte es tener en un solo lugar toda la materia vista en ay
 ### Contenidos
 
 * Introducción a SQL
+* SQL Avanzado
 * HTML, CSS y Bootstrap
 * PHP
 * PHP: Un ejemplo
