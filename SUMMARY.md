@@ -6,18 +6,21 @@
 
 * [Introducción a SQL](contenidos/introduccion-a-sql.md)
 * [SQL Avanzado](contenidos/sql-avanzado.md)
-* [HTML, CSS y Bootstrap](contenidos/html-css-bootstrap.md)
-* [Ruby](contenidos/ruby.md)
-* [Patrón Modelo-Vista-Controlador](contenidos/patron-modelo-vista-controlador.md)
-* [Ruby On Rails](contenidos/ruby-on-rails.md)
-* [RoR Devise](contenidos/ror-devise.md)
-* [RoR CRUD](contenidos/ror-crud.md)
 
 ## PHP
 
+* [HTML, CSS y Bootstrap](php/html-css-bootstrap.md)
 * [PHP: Un ejemplo](php/php-un-ejemplo.md)
 * [Sesiones en PHP](php/sesiones-en-php.md)
 * [PHP](php/php.md)
+
+## Ruby on Rails
+
+* [Patrón Modelo-Vista-Controlador](ruby-on-rails/patron-modelo-vista-controlador.md)
+* [Ruby](ruby-on-rails/ruby.md)
+* [Ruby On Rails](ruby-on-rails/ruby-on-rails.md)
+* [RoR Devise](ruby-on-rails/ror-devise.md)
+* [RoR CRUD](ruby-on-rails/ror-crud.md)
 
 ## Adicionales
 
