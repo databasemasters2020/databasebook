@@ -243,11 +243,11 @@ Utilizamos la etiqueta &lt;a href="miPagina.php"&gt;Link aquí&lt;/a&gt;  para i
 
 Ya puedes correr tu servidor Apache y tu base de datos PostgreSQL, y dejar tu aplicación en la carpeta señalada en el tutorial **Instalación de PostgreSQL, PHP y Apache** contenido en este gitbook, a continuación imágenes del resultado:
 
-![En la imagen el formulario para Ingresar nuevas cifras de contagiados en un Pa&#xED;s.](../../.gitbook/assets/image%20%2815%29.png)
+![En la imagen el formulario para Ingresar nuevas cifras de contagiados en un Pa&#xED;s.](../.gitbook/assets/image%20%2815%29.png)
 
-![En la imagen la respuesta luego de ingresar un dato.](../../.gitbook/assets/image%20%2811%29.png)
+![En la imagen la respuesta luego de ingresar un dato.](../.gitbook/assets/image%20%2811%29.png)
 
-![En la imagen la lista de pa&#xED;ses ingresados con sus n&#xFA;meros de contagiados.](../../.gitbook/assets/image%20%286%29.png)
+![En la imagen la lista de pa&#xED;ses ingresados con sus n&#xFA;meros de contagiados.](../.gitbook/assets/image%20%286%29.png)
 
 {% hint style="info" %}
 Para más información de PHP visitar:

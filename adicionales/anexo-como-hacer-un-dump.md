@@ -14,15 +14,15 @@ Un dump es, en pocas palabras, un archivo que contiene información relevante de
 
 En el menú izquierdo,  haga click derecho en la base de datos que desee respaldar y seleccione la opción **Backup...**
 
-![Haciendo un dump de la BD &quot;Prueba&quot;](../../.gitbook/assets/image%20%289%29.png)
+![Haciendo un dump de la BD &quot;Prueba&quot;](../.gitbook/assets/image%20%289%29.png)
 
 Luego, en **Filename** especifique la ubicación donde desea guardar el archivo, junto con su nombre. El dump creará un archivo en formato **.sql**. En este ejemplo, guardaremos el dump en el escritorio con el nombre **tarea-1.sql**.
 
-![](../../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 Le damos a **Create.** Finalmente, presionamos **Backup** y una notificación nos indicará si la creación del dump fue exitosa.
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 {% hint style="warning" %}
 Para evitar problemas de configuración, evite modificar otros ajustes.
@@ -32,11 +32,11 @@ Para restaurar una Base de Datos, haga click derecho en la Base de Datos deseada
 
   
 
-![Por defecto, Restore abre la ventana buscando en formato &quot;backup&quot;.](../../.gitbook/assets/image%20%2818%29.png)
+![Por defecto, Restore abre la ventana buscando en formato &quot;backup&quot;.](../.gitbook/assets/image%20%2818%29.png)
 
 Luego, en la pestaña **Restore options** habilite la opción **Clean before restore.** Finalmente, presionamos **Restore** y de forma análoga pgAdmin nos indicará si la restauración fue exitosa.
 
-![Recuerde habilitar clean before restore.](../../.gitbook/assets/image%20%288%29.png)
+![Recuerde habilitar clean before restore.](../.gitbook/assets/image%20%288%29.png)
 
 ### Haciendo un dump desde la Consola.
 
