@@ -2,10 +2,10 @@
 
 * [Bases de Datos INF-UTFSM](README.md)
 
-## Contenidos
+## SQL
 
-* [Introducción a SQL](contenidos/introduccion-a-sql.md)
-* [SQL Avanzado](contenidos/sql-avanzado.md)
+* [Introducción a SQL](sql/introduccion-a-sql.md)
+* [SQL Avanzado](sql/sql-avanzado.md)
 
 ## PHP
 
