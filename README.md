@@ -6,7 +6,7 @@ description: >-
 
 # Bases de Datos INF-UTFSM
 
-## Bienvenidos al Apunte de Base de Datos 2020-1 Online
+## Bienvenidos al Apunte de Base de Datos Online
 
 El objetivo de este apunte es tener en un solo lugar toda la materia vista en ayudantías en cápsulas para que puedan ser revisitadas con facilidad.
 
