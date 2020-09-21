@@ -17,8 +17,8 @@
 ## Ruby on Rails
 
 * [Patrón Modelo-Vista-Controlador](ruby-on-rails/patron-modelo-vista-controlador.md)
-* [Ruby](ruby-on-rails/ruby.md)
 * [Ruby On Rails](ruby-on-rails/ruby-on-rails.md)
+* [Ruby](ruby-on-rails/ruby.md)
 * [RoR Devise](ruby-on-rails/ror-devise.md)
 * [RoR CRUD](ruby-on-rails/ror-crud.md)
 
