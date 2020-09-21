@@ -9,18 +9,18 @@
 
 ## PHP
 
+* [PHP](php/php/README.md)
+  * [PHP: Un ejemplo](php/php/php-un-ejemplo.md)
 * [HTML, CSS y Bootstrap](php/html-css-bootstrap.md)
-* [PHP: Un ejemplo](php/php-un-ejemplo.md)
 * [Sesiones en PHP](php/sesiones-en-php.md)
-* [PHP](php/php.md)
 
 ## Ruby on Rails
 
 * [Patrón Modelo-Vista-Controlador](ruby-on-rails/patron-modelo-vista-controlador.md)
-* [Ruby On Rails](ruby-on-rails/ruby-on-rails.md)
 * [Ruby](ruby-on-rails/ruby.md)
-* [RoR Devise](ruby-on-rails/ror-devise.md)
-* [RoR CRUD](ruby-on-rails/ror-crud.md)
+* [Ruby On Rails](ruby-on-rails/ruby-on-rails/README.md)
+  * [RoR CRUD](ruby-on-rails/ruby-on-rails/ror-crud.md)
+  * [RoR Devise](ruby-on-rails/ruby-on-rails/ror-devise.md)
 
 ## Git
 
@@ -30,8 +30,8 @@
 
 ## Adicionales
 
-* [Anexo: Cómo hacer un dump](adicionales/anexo-como-hacer-un-dump.md)
 * [Instalación de PostgreSQL, PHP y Apache](adicionales/instalacion-de-postgresql-y-php.md)
+* [Cómo hacer un dump en PostgreSQL](adicionales/como-hacer-un-dump.md)
 
 ---
 

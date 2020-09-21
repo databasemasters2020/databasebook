@@ -10,25 +10,35 @@ description: >-
 
 El objetivo de este apunte es tener en un solo lugar toda la materia vista en ayudantías en cápsulas para que puedan ser revisitadas con facilidad.
 
-### Contenidos
+## Contenidos
+
+### SQL
 
 * Introducción a SQL
 * SQL Avanzado
-* HTML, CSS y Bootstrap
-* PHP
-* PHP: Un ejemplo
-* Sesiones en PHP
-* Ruby
-* Patrón Modelo-Vista-Controlador
-* Ruby On Rails
-* RoR Devise
-* RoR CRUD
 
-### Material Adicional
+### PHP
+
+* PHP
+* HTML, CSS y Bootstrap
+* Sesiones en PHP
+
+### Ruby On Rails
+
+* Patrón Modelo-Vista-Controlador
+* Ruby
+* Ruby On Rails
+
+### Git
 
 * Instalación de Git
 * Uso de Git
 * Resumen Comandos Git
+
+### Material Adicional
+
 * Instalación de PostgreSQL, PHP y Apache
-* Créditos
+* Cómo hacer un dump en PostgreSQL
+
+
 
