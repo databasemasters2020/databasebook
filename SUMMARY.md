@@ -33,6 +33,10 @@
 * [Instalación de PostgreSQL, PHP y Apache](adicionales/instalacion-de-postgresql-y-php.md)
 * [Cómo hacer un dump en PostgreSQL](adicionales/como-hacer-un-dump.md)
 
+## BD Relacionales
+
+* [Integridad Referencial](bd-relacionales/integridad-referencial.md)
+
 ---
 
 * [Créditos](creditos.md)
