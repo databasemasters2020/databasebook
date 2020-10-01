@@ -32,7 +32,7 @@ En este ejemplo, como por asuntos de contabilidad nos podría interesar guardar 
 
 ![](../.gitbook/assets/if-restriccion.png)
 
-Si asumimos que **Rut** \(en PERSONA\) ****tiene la restriccion ****de que **debe ser mayor a cero.** La segunda fila en FACTURA tiene una clave foránea que **rompe las restricciones** puestas en la columna a la que referencia, cuando esto sucede, es un problema de integridad referencial.
+Si asumimos que **Rut** \(en PERSONA\) ****tiene la restricción ****de que **debe ser mayor a cero.** La segunda fila en FACTURA tiene una clave foránea que **rompe las restricciones** puestas en la columna a la que referencia, cuando esto sucede, es un problema de integridad referencial.
 
 {% hint style="info" %}
 Si desea una definición mas objetiva de este concepto, se recomienda revisar la sección 5.2 de este apunte: [http://gpd.sip.ucm.es/rafa/docencia/bdsi/apuntes/TEMA05.pdf](http://gpd.sip.ucm.es/rafa/docencia/bdsi/apuntes/TEMA05.pdf)
