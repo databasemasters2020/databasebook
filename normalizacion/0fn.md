@@ -27,7 +27,7 @@ Los pasos que nosotros debemos realizar en esta parte son:
 ![Nota: Esta es s&#xF3;lo una de las repeticiones del ejercicio \(est&#xE1; de Ejemplo\)](../.gitbook/assets/0fnrep.png)
 
 * Detectar si necesitaremos añadir **identificadores** para que la normalización futura funcione
-  * Este paso es completamente realizable a medida que vamos normalizando. Por lo general después de practicar la consideración de identificadores nace de manera intuitiva.
+  * Este paso es completamente realizable a medida que vamos normalizando, pero por lo general después de hacer ejercicios la consideración de identificadores nace de manera intuitiva.
 
 ![Nota: Este es s&#xF3;lo uno de los varios casos que requieren atenci&#xF3;n en el ejercicio](../.gitbook/assets/0fnidef.png)
 
