@@ -12,7 +12,7 @@ Nosotros al querer normalizar, tendremos una **vista**, la cual por lo general c
 
 Como se ha mencionado, dentro de la normalización iremos "creando tablas" para ir deduciendo la estructura de la base de datos detrás, para ello, comenzaremos en **0FN creando una tabla que contenga todos los elementos o atributos presentes en la interfaz.**
 
-Al hacer esto, junto con algunas consideraciones, nosotros buscamos "preparar la cancha" para cuando vayamos avanzando en las formas normales \(normalización\). 
+Al hacer esto, junto con algunas consideraciones, nosotros buscamos "preparar la cancha" para cuando vayamos avanzando en las formas normales \(pasos de normalización\). 
 
 ### Tareas en 0FN
 
