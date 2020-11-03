@@ -8,7 +8,7 @@ description: La situación antes de comenzar la normalización
 
 Nosotros al querer normalizar, tendremos una **vista**, la cual por lo general corresponderá a la interfaz que se utiliza con la base de datos que deseamos crear
 
-![Ejemplo de vista, Cert&#xE1;men2 2017-1](../.gitbook/assets/vista.png)
+![Ejemplo de vista, Cert&#xE1;men-2 2017-1](../.gitbook/assets/vista.png)
 
 Como se ha mencionado, dentro de la normalización iremos "creando tablas" para ir deduciendo la estructura de la base de datos detrás, para ello, comenzaremos en **0FN creando una tabla que contenga todos los elementos o atributos presentes en la interfaz.**
 
