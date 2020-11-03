@@ -37,11 +37,11 @@
 
 * [Integridad Referencial](bd-relacionales/integridad-referencial.md)
 
----
-
-* [Créditos](creditos.md)
-
 ## Normalización
 
 * [0FN - Extracción de atributos](normalizacion/0fn.md)
+
+---
+
+* [Créditos](creditos.md)
 

@@ -29,12 +29,9 @@ En una base de datos implementada siempre se debe buscar que se mantenga la Inte
 En este ejemplo, como por asuntos de contabilidad nos podría interesar guardar los montos \(aunque no tengan dueño\), la mejor solución sería mover las filas a una tabla respaldo. Esto es una forma de realizar un **borrado lógico,** o sea, borrar sin borrar, estilo Papelera de Reciclaje.
 
 * Una clave foránea tiene un **tipo de dato incompatible** a las restricciones de la columna que referencia
-
-![](../.gitbook/assets/if-restriccion.png)
-
-Si asumimos que **Rut** \(en PERSONA\) ****tiene la restricción ****de que **debe ser mayor a cero.** La segunda fila en FACTURA tiene una clave foránea que **rompe las restricciones** puestas en la columna a la que referencia, cuando esto sucede, es un problema de integridad referencial.
+  * Si asumimos que **Rut** \(en PERSONA\) ****tiene la restricción ****de que **debe ser mayor a cero.** La segunda fila en FACTURA tiene una clave foránea que **rompe las restricciones** puestas en la columna a la que referencia, cuando esto sucede, es un problema de integridad referencial.
 
 {% hint style="info" %}
-Si desea una definición mas objetiva de este concepto, se recomienda revisar la sección 5.2 de este apunte: [http://gpd.sip.ucm.es/rafa/docencia/bdsi/apuntes/TEMA05.pdf](http://gpd.sip.ucm.es/rafa/docencia/bdsi/apuntes/TEMA05.pdf)
+Si desea una definición mas objetiva de este concepto \(y le gustan las definiciones matemáticas\), se recomienda revisar la sección 5.2 de este apunte: [http://gpd.sip.ucm.es/rafa/docencia/bdsi/apuntes/TEMA05.pdf](http://gpd.sip.ucm.es/rafa/docencia/bdsi/apuntes/TEMA05.pdf)
 {% endhint %}
 

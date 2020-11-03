@@ -40,5 +40,15 @@ El objetivo de este apunte es tener en un solo lugar toda la materia vista en ay
 * Instalación de PostgreSQL, PHP y Apache
 * Cómo hacer un dump en PostgreSQL
 
+## Contenidos teóricos
+
+### Bases de Datos Relacionales
+
+* Integridad Referencial
+
+### Normalización
+
+* 0FN - Extracción de atributos
+
 
 
