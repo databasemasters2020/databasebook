@@ -41,3 +41,7 @@
 
 * [Créditos](creditos.md)
 
+## Normalización
+
+* [0FN - Vista sin normalizar](normalizacion/0fn.md)
+
