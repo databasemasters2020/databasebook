@@ -1,8 +1,8 @@
 ---
-description: La situación antes de comenzar la normalización
+description: Antes de comenzar a normalizar...
 ---
 
-# 0FN - Vista sin normalizar
+# 0FN - Extracción de atributos
 
 ## Contexto pre-normalización
 

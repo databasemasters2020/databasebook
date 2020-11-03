@@ -43,5 +43,5 @@
 
 ## Normalización
 
-* [0FN - Vista sin normalizar](normalizacion/0fn.md)
+* [0FN - Extracción de atributos](normalizacion/0fn.md)
 
