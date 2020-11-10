@@ -4,6 +4,16 @@ description: Antes de comenzar a normalizar...
 
 # 0FN - Extracción de atributos
 
+## TL;DR
+
+**Objetivo 0FN:** Preparar los datos para comenzar a realizar la normalización \(Crear una tabla inicial, realizar supuestos y añadir datos necesarios\)
+
+Pasos a realizar en 0FN
+
+1. **Extraer** los datos de la vista ****y **trasladarlos** todos a una tabla
+2. Estar atento a si nuestra tabla necesita un **identificador** \(clave primaria\)
+3. Asegurarse que los datos sean **consistentes**, es decir, que las interpretaciones de la vista coincidan \(Ej: ¿DATE y TIME distinto de DATETIME?\)
+
 ## Contexto pre-normalización
 
 Nosotros al querer normalizar, tendremos una **vista**, la cual por lo general corresponderá a la interfaz que se utiliza con la base de datos que deseamos crear
