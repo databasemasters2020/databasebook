@@ -112,38 +112,41 @@ A partir de estas operaciones, podemos contestar preguntas como las siguientes:
 
 ### GROUP BY y ORDER BY
 
-Supongamos ahora que queremos saber cuál es el movimiento que causa más daño de cada tipo. Si bien podemos hacer un **SELECT** por cada uno de los elementos, existe una forma más rápida de plantear lo mismo:
+Supongamos ahora que queremos saber cuánto daño es el máximo que puedo causar por cada tipo. Si bien podemos hacer un **SELECT** por cada uno de los elementos, existe una forma más rápida de plantear lo mismo:
 
 {% tabs %}
 {% tab title="SQL" %}
 ```sql
 SELECT
     TIPO,
-    NOMBRE,
     MAX(DANO) AS DANO_MOV
 FROM
     MOVE
 GROUP BY
     TIPO
 ORDER BY
-    DANO_MOV DESC;
+    MAX(DANO) DESC;
 ```
 {% endtab %}
 
 {% tab title="Resultado" %}
-| TIPO | NOMBRE | DANO\_MOV |
-| :--- | :--- | :--- |
-| Normal | Explosión | 250 |
-| Fuego | V de Fuego | 180 |
-| Psíquico | Láser Prisma | 160 |
-| Lucha | Puño Certero | 150 |
-| Planta | Planta Feroz | 150 |
-| Agua | Hidrocañón | 150 |
-| Roca | Romperrocas | 150 |
-| Hielo | Rayo Gélido | 140 |
-| Volador | Ataque Aéreo | 140 |
+| TIPO | DANO\_MOV |
+| :--- | :--- |
+| Normal | 250 |
+| Fuego | 180 |
+| Psíquico | 160 |
+| Lucha | 150 |
+| Planta | 150 |
+| Agua | 150 |
+| Roca | 150 |
+| Hielo | 140 |
+| Volador | 140 |
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+Algunos, pero **no todos** los DBMS aceptan el alias de una operación de agrupación dentro del bloque ORDER BY.
+{% endhint %}
 
 En esta consulta están ocurriendo 2 cosas importantes:
 
@@ -151,13 +154,12 @@ En esta consulta están ocurriendo 2 cosas importantes:
 * **ORDER BY** indica que, una vez obtenida la tabla resultado, ésta sea ordenada según la columna `DANO_MOV`, de forma descendiente \(mayor a menor\).
 
 Un aspecto relevante es que se puede agrupar y ordenar por **múltiples columnas al mismo tiempo.** De esta forma, se generará una fila en la tabla resultante **por cada combinación única** de las columnas del `GROUP BY`; y se ordenarán **en el orden en que se indiquen las columnas** en `ORDER BY`.   
-****Por ejemplo, si me interesa saber el movimiento Físico y Especial más poderoso de cada tipo, para luego ordenar por daño y, en caso de empate, por id:
+****Por ejemplo, si me interesa saber cuánto daño hace el movimiento Físico y Especial más poderoso de cada tipo, para luego ordenar por daño y, en caso de empate, por id:
 
 ```sql
 SELECT
     TIPO,
     CATEG,
-    NOMBRE,
     MAX(DANO) AS DANO_MOV
 FROM
     MOVE
@@ -167,10 +169,14 @@ WHERE
 GROUP BY
     TIPO, CATEG
 ORDER BY
-    DANO_MOV DESC, ID ASC;
+    MAX(DANO) DESC, ID ASC;
 ```
 
 Esto entregará, en caso que existan, 2 filas por cada tipo: una para el mejor movimiento especial y otra para el mejor movimiento físico.
+
+{% hint style="danger" %}
+Cuando se utiliza **GROUP BY** para operaciones de agregación, los atributos que se pueden seleccionar \(en el bloque **SELECT**\) deben tener relación directa con los atributos que se están agrupando. Por lo tanto, sólo puedo seleccionar los **atributos que sean parte del bloque GROUP BY** \(además de los atributos que estamos agrupando\).
+{% endhint %}
 
 ### Consultas Anidadas
 
