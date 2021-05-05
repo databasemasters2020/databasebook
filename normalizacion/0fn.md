@@ -28,13 +28,13 @@ Al hacer esto, junto con algunas consideraciones, nosotros buscamos "preparar la
 
 Los pasos que nosotros debemos realizar en esta parte son:
 
-* **Extracción:** Extraer todos los datos que tenemos en la vista, desde atributos explícitos \(como datos que vemos directamente\) o implícitios que vayamos a considerar o suponer.
-  * Las **repeticiones** se colocan como un sólo elemento encerrado en **llaves** "{...}".
+* **Extracción:** Extraer todos los datos que tenemos en la vista, desde atributos explícitos \(como datos que vemos directamente\) o implícitos que vayamos a considerar o suponer.
+  * Las **repeticiones** se colocan como un solo elemento encerrado en **llaves** "{...}".
   * Si existen **repeticiones dentro de las repeticiones** se coloca un nuevo subconjunto dentro de la llave actual "{...,{...}}".
 
 ![](../.gitbook/assets/ofndata.png)
 
-![Nota: Esta es s&#xF3;lo una de las repeticiones del ejercicio \(est&#xE1; de Ejemplo\)](../.gitbook/assets/0fnrep.png)
+![Nota: Esta es s&#xF3;lo una de las repeticiones del ejercicio](../.gitbook/assets/0fnrep.png)
 
 * **Identificadores:** Detectar si necesitaremos añadir **identificadores** para que la normalización futura funcione
   * Este paso es completamente realizable a medida que vamos normalizando, pero por lo general después de hacer ejercicios la consideración de identificadores nace de manera intuitiva.

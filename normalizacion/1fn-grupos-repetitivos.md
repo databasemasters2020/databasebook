@@ -2,7 +2,7 @@
 description: Primer paso de la normalización
 ---
 
-# 1FN - Grupos repetitivos
+# 1FN - Grupos repetitivos \(WIP\)
 
 ## Objetivo
 

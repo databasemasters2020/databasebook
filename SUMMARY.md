@@ -40,7 +40,7 @@
 ## Normalización
 
 * [0FN - Extracción de atributos](normalizacion/0fn.md)
-* [1FN - Grupos repetitivos](normalizacion/1fn-grupos-repetitivos.md)
+* [1FN - Grupos repetitivos \(WIP\)](normalizacion/1fn-grupos-repetitivos.md)
 
 ---
 
