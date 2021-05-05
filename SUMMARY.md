@@ -37,7 +37,7 @@
 
 * [Integridad Referencial](bd-relacionales/integridad-referencial.md)
 
-## Normalización
+## Normalización \(WIP\) <a id="normalizacion"></a>
 
 * [0FN - Extracción de atributos](normalizacion/0fn.md)
 * [1FN - Grupos repetitivos \(WIP\)](normalizacion/1fn-grupos-repetitivos.md)

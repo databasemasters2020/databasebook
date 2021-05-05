@@ -4,7 +4,7 @@ description: Antes de comenzar a normalizar...
 
 # 0FN - Extracción de atributos
 
-## TL;DR
+## TL;DR \(Resumen\)
 
 **Objetivo 0FN:** Preparar los datos para comenzar a realizar la normalización \(Crear una tabla inicial, realizar supuestos y añadir datos necesarios\)
 
