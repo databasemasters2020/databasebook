@@ -199,7 +199,7 @@ extension=pgsql
 
 ### Ahora, a probar el resultado
 
-Modifique el archivo **index.html** que está en el directorio de su tarea por lo siguiente. **Recuerde cambiar &lt;contraseña&gt; por la contraseña de su super usuario postgres:**
+Modifique el archivo **index.html** que está en el directorio de su tarea por lo siguiente. **Recuerde cambiar &lt;contraseña&gt; \(eliminando los "&lt;&gt;"\) por la contraseña de su super usuario postgres:**
 
 ```php
 <html><body>
