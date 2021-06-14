@@ -14,6 +14,11 @@
 * [HTML, CSS y Bootstrap](php/html-css-bootstrap.md)
 * [Sesiones en PHP](php/sesiones-en-php.md)
 
+## API Rest
+
+* [Instalación Flask](api-rest/instalacion-flask.md)
+* [Flask \| Python](api-rest/flask-python.md)
+
 ## Ruby on Rails
 
 * [Patrón Modelo-Vista-Controlador](ruby-on-rails/patron-modelo-vista-controlador.md)
@@ -21,11 +26,6 @@
 * [Ruby On Rails](ruby-on-rails/ruby-on-rails/README.md)
   * [RoR CRUD](ruby-on-rails/ruby-on-rails/ror-crud.md)
   * [RoR Devise](ruby-on-rails/ruby-on-rails/ror-devise.md)
-
-## API Rest
-
-* [Instalación Flask](api-rest/instalacion-flask.md)
-* [Flask \| Python](api-rest/flask-python.md)
 
 ## Git
 
