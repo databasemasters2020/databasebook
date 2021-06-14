@@ -8,7 +8,7 @@ description: >-
 
 ## Endpoints
 
-Un endpoint es una ruta en la que podemos realizar una operación específica sobre la base de datos, a continuación el código principal de nuestra API donde se definen los endpoints \(main.py\): 
+Un endpoint es una ruta \(URL\) en la que podemos realizar una operación específica sobre la base de datos. A continuación el código principal de nuestra API donde se definen los endpoints \(main.py\): 
 
 {% tabs %}
 {% tab title="main.py" %}

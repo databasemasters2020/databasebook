@@ -12,9 +12,10 @@ En caso de no tener instalado PIP, seguir el siguiente tutorial: [https://pip.py
 
 ## Entorno virtual de desarrollo
 
-Si ya has trabajo con Python previamente, notarás que a medida que pasa el tiempo y hemos trabajado en múltiples proyectos la cantidad de librerías que podríamos tener instaladas puede ser muy grande, esto podría generar algunos problemas en nuevos programas que desarrollemos utilizando python, ya que se podrían generar colisiones de nombres entre librerías, lentitud al cargar las librerías, etcétera. Para solucionar este problema es muy recomendable hacer uso de un entorno virtual de desarrollo, el cual nos provee un espacio de trabajo restringido a las instalaciones específicas que hagamos estando en ese entorno virtual. Por ejemplo, si instanciamos un entorno virtual X en python3 e instalamos numpy \(considerando que nunca antes la habíamos instalado\) entonces numpy solo estará disponible cuando activemos el entorno X, si salimos del entorno X, numpy no estará disponible. A continuación se muestra como crear un entorno virtual llamado **tarea3bd** en consola de comandos:
+Si ya has trabajado con Python previamente, notarás que a medida que pasa el tiempo y hemos trabajado en múltiples proyectos, la cantidad de librerías que podríamos tener instaladas puede ser muy grande, esto podría generar algunos problemas en nuevos programas que desarrollemos utilizando python, ya que se podrían generar colisiones de nombres, lentitud al cargar las librerías, etcétera. Para solucionar este problema es muy recomendable hacer uso de un entorno virtual de desarrollo, el cual nos provee un espacio de trabajo restringido a las instalaciones específicas que hagamos estando en ese entorno virtual. Por ejemplo, si instanciamos un entorno virtual X en python3 e instalamos numpy \(considerando que nunca antes lo habíamos instalado\) entonces numpy solo estará disponible cuando activemos el entorno X, si salimos del entorno X, numpy no estará disponible. A continuación se muestra como crear un entorno virtual llamado **tarea3bd** en consola de comandos:
 
 ```text
+pip install virtualenv
 python -m venv tarea3bd
 ```
 
