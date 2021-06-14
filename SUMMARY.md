@@ -22,16 +22,16 @@
   * [RoR CRUD](ruby-on-rails/ruby-on-rails/ror-crud.md)
   * [RoR Devise](ruby-on-rails/ruby-on-rails/ror-devise.md)
 
+## API Rest
+
+* [Instalación Flask](api-rest/instalacion-flask.md)
+* [Flask \| Python](api-rest/flask-python.md)
+
 ## Git
 
 * [Instalación de Git](git/git.md)
 * [Uso de Git](git/git-1.md)
 * [Resumen Comandos Git](git/comandos-git.md)
-
-## Adicionales
-
-* [Instalación de PostgreSQL, PHP y Apache](adicionales/instalacion-de-postgresql-y-php.md)
-* [Cómo hacer un dump en PostgreSQL](adicionales/como-hacer-un-dump.md)
 
 ## BD Relacionales
 
@@ -41,6 +41,11 @@
 
 * [0FN - Extracción de atributos](normalizacion/0fn.md)
 * [1FN - Grupos repetitivos \(WIP\)](normalizacion/1fn-grupos-repetitivos.md)
+
+## Adicionales
+
+* [Instalación de PostgreSQL, PHP y Apache](adicionales/instalacion-de-postgresql-y-php.md)
+* [Cómo hacer un dump en PostgreSQL](adicionales/como-hacer-un-dump.md)
 
 ---
 
