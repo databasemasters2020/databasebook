@@ -6,6 +6,28 @@ description: >-
 
 # Flask \| Python
 
+## ¿Qué es una API?
+
+Una API es un conjunto de definiciones y protocolos para la integración de distintos componentes de software. A través de una API podemos definir el formato de comunicación a utilizar entre un proveedor y consumidor de los datos, por ejemplo, un proveedor podría ser una aplicación que tiene acceso a los datos de todas las criptodivisas, este podría contener un método que recibe una petición con el nombre de una moneda y devuelve al consumidor el valor actual de esa moneda.
+
+## ¿Qué es REST?
+
+Un servicio REST define un conjunto de restricciones a tener en cuenta cuando desarrollamos una arquitectura de software considerando los estándares de HTTP. Las principales restricciones que define un sistema RESTful son las siguientes:
+
+*  **Cliente-servidor**: El servidor se encarga de controlar los datos mientras que el cliente se encarga de manejar las interacciones del usuario. Esta restricción mantiene al cliente y al servidor débilmente acoplados \(el cliente no necesita conocer los detalles de implementación del servidor y el servidor se “despreocupa” de cómo son usados los datos que envía al cliente\).
+*  **Sin estado**: aquí decimos que cada petición que recibe el servidor debería ser independiente y contener todo lo necesario para ser procesada.
+*  **Cacheable**: debe admitir un sistema de almacenamiento en caché. Este almacenamiento evitará repetir varias conexiones entre el servidor y el cliente para recuperar un mismo recurso.
+*  **Interfaz uniforme**: define una interfaz genérica para administrar cada interacción que se produzca entre el cliente y el servidor de manera uniforme, lo cual simplifica y separa la arquitectura. Esta restricción indica que cada recurso del servicio REST debe tener una única dirección o “URI”.
+*  **Sistema de capas**: el servidor puede disponer de varias capas para su implementación. Esto ayuda a mejorar la escalabilidad, el rendimiento y la seguridad.
+
+{% hint style="info" %}
+Referencia: [https://www.idento.es/blog/desarrollo-web/que-es-una-api-rest/](https://www.idento.es/blog/desarrollo-web/que-es-una-api-rest/)
+{% endhint %}
+
+## ¿Qué es una API REST?
+
+Definido lo anterior, una API REST consiste en un conjunto de definiciones y protocolos para la integración de distintos componentes de software que toman en cuenta las restricciones impuestas por un sistema RESTful. Lo anterior se ha convertido en una estándar en la comunicación mediante HTTP, por lo que es ampliamente utilizado para comunicar distintas aplicaciones o proveer acceso a datos específicos, las API REST están presentes en desarrollo de software \(microservicios\), ciencia de datos \(consumir datos de algún centro de datos, por ejemplo: [https://datos.gob.cl/](https://datos.gob.cl/)\), etcétera.
+
 ## Endpoints
 
 Un endpoint es una ruta \(URL\) en la que podemos realizar una operación específica sobre la base de datos. A continuación el código principal de nuestra API donde se definen los endpoints \(main.py\): 
