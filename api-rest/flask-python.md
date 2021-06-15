@@ -8,11 +8,11 @@ description: >-
 
 ## ¿Qué es una API?
 
-Una API es un conjunto de definiciones y protocolos para la integración de distintos componentes de software. A través de una API podemos definir el formato de comunicación a utilizar entre un proveedor y consumidor de los datos, por ejemplo, un proveedor podría ser una aplicación que tiene acceso a los datos de todas las criptodivisas, este podría contener un método que recibe una petición con el nombre de una moneda y devuelve al consumidor el valor actual de esa moneda.
+Una API _\(**A**pplication **P**rogramming **I**nterface\)_ es un conjunto de definiciones y protocolos para la integración de distintos componentes de software. A través de una API podemos definir el formato de comunicación a utilizar entre un proveedor y consumidor de los datos, por ejemplo, un proveedor podría ser una aplicación que tiene acceso a los datos de todas las criptodivisas, este podría contener un método que recibe una petición con el nombre de una moneda y devuelve al consumidor el valor actual de esa moneda.
 
 ## ¿Qué es REST?
 
-Un servicio REST define un conjunto de restricciones a tener en cuenta cuando desarrollamos una arquitectura de software considerando los estándares de HTTP. Las principales restricciones que define un sistema RESTful son las siguientes:
+Un servicio REST _\(**Re**presentational **S**tate **T**ransfer\)_ define un conjunto de restricciones a tener en cuenta cuando desarrollamos una arquitectura de software considerando los estándares de HTTP _\(**H**yper**t**ext **T**ransfer **P**rotocol\)_. Las principales restricciones que define un sistema RESTful son las siguientes:
 
 *  **Cliente-servidor**: El servidor se encarga de controlar los datos mientras que el cliente se encarga de manejar las interacciones del usuario. Esta restricción mantiene al cliente y al servidor débilmente acoplados \(el cliente no necesita conocer los detalles de implementación del servidor y el servidor se “despreocupa” de cómo son usados los datos que envía al cliente\).
 *  **Sin estado**: aquí decimos que cada petición que recibe el servidor debería ser independiente y contener todo lo necesario para ser procesada.
