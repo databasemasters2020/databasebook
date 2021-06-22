@@ -159,7 +159,7 @@ db = SQLAlchemy()
 
 # Creamos la entidad User
 class User(db.Model):
-	__tablename__ = 'users'
+	__tablename__ = 'user'
 	id = db.Column(db.Integer, primary_key=True)
 	username = db.Column(db.String(50), nullable=False) 
 	created_at = db.Column(db.DateTime(), nullable=False, default=db.func.current_timestamp())
@@ -222,4 +222,342 @@ flask run
 {% hint style="warning" %}
 Para probar las APIs se recomienda investigar el uso de Postman. En ayudantía veremos como utilizarlo.
 {% endhint %}
+
+### Relaciones
+
+A continuación añadiremos una entidad Tarea al modelo y relacionaremos a cada usuario con una o varias tareas:
+
+```python
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+# Creamos la entidad User
+class User(db.Model):
+	__tablename__ = 'user'
+	id = db.Column(db.Integer, primary_key=True)
+	username = db.Column(db.String(50), nullable=False) 
+	# Añadimos la relación
+	tasks = db.relationship('Task', lazy='dynamic')
+	created_at = db.Column(db.DateTime(), nullable=False, default=db.func.current_timestamp())
+	
+	@classmethod
+	def create(cls, username):
+		# Instanciamos un nuevo usuario y lo guardamos en la bd
+		user = User(username=username)
+		return user.save()
+
+	def save(self):
+		try:
+			db.session.add(self)
+			db.session.commit()
+
+			return self
+		except:
+			return False
+	def json(self):
+		return {
+			'id': self.id,
+			'username': self.username,
+			'created_at': self.created_at
+		}
+	def update(self):
+		self.save()
+	def delete(self):
+		try:
+			db.session.delete(self)
+			db.session.commit()
+
+			return True
+		except:
+			return False
+			
+			
+class Task(db.Model):
+	__tablename__ = 'task'
+	id = db.Column(db.Integer, primary_key=True)
+	description = db.Column(db.Text())
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	user = db.relationship("User")
+	created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
+	
+	@classmethod
+	def create(cls, description, user_id):
+		# Instanciamos un nuevo usuario y lo guardamos en la bd
+		task = Task(description=description,user_id=user_id)
+		return task.save()
+
+	def save(self):
+		try:
+			db.session.add(self)
+			db.session.commit()
+
+			return self
+		except:
+			return False
+	def json(self):
+		return {
+			'id': self.id,
+			'description': self.description,
+			'user_id':self.user_id,
+			'created_at': self.created_at
+		}
+	def update(self):
+		self.save()
+	def delete(self):
+		try:
+			db.session.delete(self)
+			db.session.commit()
+
+			return True
+		except:
+			return False
+```
+
+A continuación añadimos los Endpoints para añadir tareas y obtener todas las tareas \(tasks\) al final del archivo main.py 
+
+```python
+@app.route('/api/v1/tasks/', methods=['POST'])
+def create_task():
+	json = request.get_json(force=True)
+
+	if json.get('description') is None:
+		return jsonify({'message': 'El formato está mal'}), 400
+
+	task = Task.create(json['description'],json['user_id'])
+
+	return jsonify({'task': task.json() })
+
+@app.route('/api/v1/tasks', methods=['GET'])
+def get_tasks():
+	tasks = [ task.json() for task in Task.query.all() ] 
+	return jsonify({'tasks': tasks })
+
+
+if __name__ == '__main__':
+	app.run(debug=True)
+
+```
+
+### Consultas personalizadas
+
+A continuación realizaremos un endpoint para una consulta personalizada, es decir, escrita en lenguaje SQL. La consulta consiste en traer todas las tareas con un id igual o menor al especificado por el usuario en la url, primero añadimos el método en el modelo Task:
+
+```python
+def custom(max_id):
+		try:
+			result = db.session.execute('SELECT * FROM task WHERE id <= :max', {'max': max_id})
+			return result
+		except:
+			return False
+```
+
+Y luego creamos el Endpoint en el archivo main.py:
+
+```python
+@app.route('/api/v1/tasks/max_id/<max_id>', methods=['GET'])
+def get_custom(max_id):
+	tasks = [dict(task) for task in Task.custom(max_id=max_id).fetchall()]
+	return jsonify({'tasks': tasks })
+```
+
+## Código Completo
+
+{% tabs %}
+{% tab title="main.py" %}
+```python
+from flask import Flask
+from flask import jsonify
+from config import config
+from models import db
+from models import User
+from models import Task
+from flask import request
+
+
+def create_app(enviroment):
+	app = Flask(__name__)
+	app.config.from_object(enviroment)
+	with app.app_context():
+		db.init_app(app)
+		db.create_all()
+	return app
+
+
+enviroment = config['development']
+app = create_app(enviroment)
+
+@app.route('/api/v1/users', methods=['GET'])
+def get_users():
+	users = [ user.json() for user in User.query.all() ] 
+	return jsonify({'users': users })
+
+@app.route('/api/v1/users/<id>', methods=['GET'])
+def get_user(id):
+	user = User.query.filter_by(id=id).first()
+	if user is None:
+		return jsonify({'message': 'El usuario no existe'}), 404
+
+	return jsonify({'user': user.json() })
+
+@app.route('/api/v1/users/', methods=['POST'])
+def create_user():
+	json = request.get_json(force=True)
+
+	if json.get('username') is None:
+		return jsonify({'message': 'El formato está mal'}), 400
+
+	user = User.create(json['username'])
+
+	return jsonify({'user': user.json() })
+
+@app.route('/api/v1/users/<id>', methods=['PUT'])
+def update_user(id):
+	user = User.query.filter_by(id=id).first()
+	if user is None:
+		return jsonify({'message': 'El usuario no existe'}), 404
+	json = request.get_json(force=True)
+	if json.get('username') is None:
+		return jsonify({'message': 'Solicitud Incorrecta'}), 400
+	user.username = json['username']
+	user.update()
+	return jsonify({'user': user.json() })
+
+@app.route('/api/v1/users/<id>', methods=['DELETE'])
+def delete_user(id):
+	user = User.query.filter_by(id=id).first()
+	if user is None:
+		return jsonify({'message': 'El usuario no existe'}), 404
+
+	user.delete()
+
+	return jsonify({'user': user.json() })
+
+@app.route('/api/v1/tasks/', methods=['POST'])
+def create_task():
+	json = request.get_json(force=True)
+
+	if json.get('description') is None:
+		return jsonify({'message': 'El formato está mal'}), 400
+
+	task = Task.create(json['description'],json['user_id'])
+
+	return jsonify({'task': task.json() })
+
+@app.route('/api/v1/tasks', methods=['GET'])
+def get_tasks():
+	tasks = [ task.json() for task in Task.query.all() ] 
+	return jsonify({'tasks': tasks })
+
+@app.route('/api/v1/tasks/max_id/<max_id>', methods=['GET'])
+def get_custom(max_id):
+	tasks = [dict(task) for task in Task.custom(max_id=max_id).fetchall()]
+	return jsonify({'tasks': tasks })
+
+if __name__ == '__main__':
+	app.run(debug=True)
+
+```
+{% endtab %}
+
+{% tab title="models.py" %}
+```python
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+# Importamos para realizar consultas personalizadas
+from sqlalchemy import text
+
+db = SQLAlchemy()
+
+# Creamos la entidad User
+class User(db.Model):
+	__tablename__ = 'user'
+	id = db.Column(db.Integer, primary_key=True)
+	username = db.Column(db.String(50), nullable=False) 
+	# Añadimos la relación
+	tasks = db.relationship('Task', lazy='dynamic')
+	created_at = db.Column(db.DateTime(), nullable=False, default=db.func.current_timestamp())
+	
+	@classmethod
+	def create(cls, username):
+		# Instanciamos un nuevo usuario y lo guardamos en la bd
+		user = User(username=username)
+		return user.save()
+
+	def save(self):
+		try:
+			db.session.add(self)
+			db.session.commit()
+
+			return self
+		except:
+			return False
+	def json(self):
+		return {
+			'id': self.id,
+			'username': self.username,
+			'created_at': self.created_at
+		}
+	def update(self):
+		self.save()
+	def delete(self):
+		try:
+			db.session.delete(self)
+			db.session.commit()
+
+			return True
+		except:
+			return False
+			
+			
+class Task(db.Model):
+	__tablename__ = 'task'
+	id = db.Column(db.Integer, primary_key=True)
+	description = db.Column(db.Text())
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	user = db.relationship("User")
+	created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
+	
+	@classmethod
+	def create(cls, description, user_id):
+		# Instanciamos un nuevo usuario y lo guardamos en la bd
+		task = Task(description=description,user_id=user_id)
+		return task.save()
+
+	def save(self):
+		try:
+			db.session.add(self)
+			db.session.commit()
+
+			return self
+		except:
+			return False
+	def json(self):
+		return {
+			'id': self.id,
+			'description': self.description,
+			'user_id':self.user_id,
+			'created_at': self.created_at
+		}
+	def update(self):
+		self.save()
+	def delete(self):
+		try:
+			db.session.delete(self)
+			db.session.commit()
+
+			return True
+		except:
+			return False
+
+	def custom(max_id):
+		try:
+			result = db.session.execute('SELECT * FROM task WHERE id <= :max', {'max': max_id})
+			return result
+		except:
+			return False
+```
+{% endtab %}
+{% endtabs %}
 
