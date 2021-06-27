@@ -362,6 +362,51 @@ def get_custom(max_id):
 	return jsonify({'tasks': tasks })
 ```
 
+### Join en SQLAlchemy
+
+A continuación nos interesa como obtener todos los usuarios junto con sus tareas respectivas, para esto realizaremos la operación JOIN, en SQLAlchemy es bastante sencillo, utilizamos la session y accedemos al método query en donde indicamos los datos que queremos, en este caso solicitamos todo el objeto User y Task, luego indicamos la condición del JOIN, para mostrar los resultados unimos ambos diccionarios del método .json\(\) y devolvemos el resultado:
+
+{% tabs %}
+{% tab title="main.py" %}
+```python
+@app.route('/api/v1/join/', methods=['GET'])
+def get_tasks_users():
+	tasks_users = [ {**(user.json()),**(task.json())} for user,task in db.session.query(User,Task).join(Task, User.id == Task.user_id).all()]
+	return jsonify({'tasks_users': tasks_users })
+```
+{% endtab %}
+{% endtabs %}
+
+### Join con Where
+
+Para añadir la cláusula where SQLAlchemy nos entrega el método filter, con el que podemos indicar una condición a satisfacer, a continuación un ejemplo donde obtenemos a un usuario específico con sus respectivas tareas:
+
+{% tabs %}
+{% tab title="main.py" %}
+```python
+@app.route('/api/v1/join/<id>', methods=['GET'])
+def get_tasks_user(id):
+	tasks_users = [ {**(user.json()),**(task.json())} for user,task in db.session.query(User,Task).join(Task, User.id == Task.user_id).filter(User.id == id).all()]
+return jsonify({'tasks_users': tasks_users })
+```
+{% endtab %}
+{% endtabs %}
+
+### Borrado en cascada
+
+Una operación muy importante a considerar para mantener la integridad referencial es el borrado en cascada, en nuestro ejemplo nos damos cuenta que la entidad Task es una entidad débil, ya que depende de la existencia de la entidad User, por lo que si borramos un User es sumamente importante que eliminemos todas las Tasks asociadas a él, esto lo configuraremos en la relación del modelo, a continuación un ejemplo:
+
+```python
+class User(db.Model):
+	__tablename__ = 'user'
+	id = db.Column(db.Integer, primary_key=True)
+	username = db.Column(db.String(50), nullable=False) 
+	# Añadimos la relación. OJO con el borrado en cascada
+	tasks = db.relationship('Task', cascade="all,delete", backref="parent", lazy='dynamic')
+	created_at = db.Column(db.DateTime(), nullable=False, default=db.func.current_timestamp())
+	
+```
+
 ## Código Completo
 
 {% tabs %}
@@ -388,6 +433,7 @@ def create_app(enviroment):
 enviroment = config['development']
 app = create_app(enviroment)
 
+# Se obtienen todos los usuarios
 @app.route('/api/v1/users', methods=['GET'])
 def get_users():
 	users = [ user.json() for user in User.query.all() ] 
@@ -455,6 +501,17 @@ def get_custom(max_id):
 	tasks = [dict(task) for task in Task.custom(max_id=max_id).fetchall()]
 	return jsonify({'tasks': tasks })
 
+
+@app.route('/api/v1/join/', methods=['GET'])
+def get_tasks_users():
+	tasks_users = [ {**(user.json()),**(task.json())} for user,task in db.session.query(User,Task).join(Task, User.id == Task.user_id).all()]
+	return jsonify({'tasks_users': tasks_users })
+
+@app.route('/api/v1/join/<id>', methods=['GET'])
+def get_tasks_user(id):
+	tasks = [ {**(user.json()),**(task.json())} for user,task in db.session.query(User,Task).join(Task, User.id == Task.user_id).filter(User.id == id).all()]
+	return jsonify({'tasks': tasks })
+
 if __name__ == '__main__':
 	app.run(debug=True)
 
@@ -476,7 +533,7 @@ class User(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	username = db.Column(db.String(50), nullable=False) 
 	# Añadimos la relación
-	tasks = db.relationship('Task', lazy='dynamic')
+	tasks = db.relationship('Task', cascade="all,delete", backref="parent", lazy='dynamic')
 	created_at = db.Column(db.DateTime(), nullable=False, default=db.func.current_timestamp())
 	
 	@classmethod
